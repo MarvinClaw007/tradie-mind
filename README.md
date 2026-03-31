@@ -1,8 +1,12 @@
-# TradieMind AI
+# TooEasy.Me
 
 **Australia's Voice-First AI Admin Co-Pilot for Tradies**
 
+*Previously: TradieMind AI*
+
 Get back on the tools. We'll handle the rest.
+
+🌐 **https://tooeasy.me**
 
 ---
 
@@ -253,9 +257,9 @@ TradieMind AI
 
 ## 📞 Contact
 
-**Website:** tradiemind.ai  
-**Email:** hello@tradiemind.ai  
-**Demo:** Request at tradiemind.ai/demo
+**Website:** https://tooeasy.me  
+**Email:** hello@tooeasy.me  
+**Demo:** Request at tooeasy.me/demo
 
 ---
 

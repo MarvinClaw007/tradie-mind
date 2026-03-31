@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TooEasy.Me - Voice-First AI Admin for Tradies</title>
+    <meta name="description" content="Get back on the tools. We'll handle the rest. Voice-to-quote in under 2 minutes.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #7c5dff;
+        }
+        
+        .logo span {
+            color: #fff;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 .highlight {
+            color: #7c5dff;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #a0a0b0;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #7c5dff;
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #6b4fe0;
+            transform: translateY(-2px);
+        }
+        
+        .beta-note {
+            margin-top: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background: rgba(255,255,255,0.02);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #7c5dff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .feature-card p {
+            color: #a0a0b0;
+        }
+        
+        /* Stats */
+        .stats {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .stat {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #7c5dff;
+        }
+        
+        .stat-label {
+            color: #888;
+            margin-top: 10px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 60px 0;
+            background: rgba(255,255,255,0.02);
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        
+        .pricing-card.featured {
+            border-color: #7c5dff;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #7c5dff;
+            margin: 20px 0;
+        }
+        
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: #888;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #a0a0b0;
+        }
+        
+        .pricing-card li:before {
+            content: "✓ ";
+            color: #7c5dff;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+        }
+        
+        footer a {
+            color: #7c5dff;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TooEasy<span>.Me</span></div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Voice-to-quote in <span class="highlight">under 2 minutes</span></h1>
+            <p>Get back on the tools. We'll handle the rest. Australia's voice-first AI admin co-pilot for tradies.</p>
+            <a href="#beta" class="cta-button">Join the Beta</a>
+            <p class="beta-note">🚀 Launching soon. Be the first to try it.</p>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Too easy, mate</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎙️ Voice-First Quoting</h3>
+                    <p>Record a voice note on-site. AI transcribes, prices, and generates a professional PDF quote instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📅 Smart Scheduling</h3>
+                    <p>Automatic job scheduling by location and urgency. Fill cancellations instantly. Save 25% on drive time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💰 Autonomous Invoicing</h3>
+                    <p>Job done = invoice sent. Payment chasers at 7, 14, 21 days. Xero & MYOB sync included.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📞 AI Phone Answering</h3>
+                    <p>Never miss a call again. AI answers, qualifies leads, and books jobs while you're on the tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats">
+        <div class="container">
+            <h2>The admin burden is real</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">10-15</div>
+                    <div class="stat-label">Hours lost to admin per week</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$52K</div>
+                    <div class="stat-label">Opportunity cost per year</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">67%</div>
+                    <div class="stat-label">Struggle with cash flow</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Faster than manual quoting</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing" id="beta">
+        <div class="container">
+            <h2>Simple pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Solo</h3>
+                    <div class="price">$149<span>/mo</span></div>
+                    <ul>
+                        <li>AI quotes & estimates</li>
+                        <li>Basic scheduling</li>
+                        <li>Invoicing & CRM</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Crew</h3>
+                    <div class="price">$249<span>/mo</span></div>
+                    <ul>
+                        <li>Everything in Solo</li>
+                        <li>AI phone answering</li>
+                        <li>BAS automation</li>
+                        <li>Xero/MYOB sync</li>
+                        <li>Up to 5 team members</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$399<span>/mo</span></div>
+                    <ul>
+                        <li>Everything in Crew</li>
+                        <li>Full AI suite</li>
+                        <li>Advanced analytics</li>
+                        <li>API access</li>
+                        <li>Unlimited users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2026 TooEasy.Me — Built for tradies, by people who understand trades.</p>
+            <p><a href="mailto:hello@tooeasy.me">hello@tooeasy.me</a></p>
+        </div>
+    </footer>
+</body>
+</html>
